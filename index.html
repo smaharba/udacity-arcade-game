@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Effective JavaScript: Frogger</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
-</body>
+    <head>
+         <meta charset="UTF-8">
+         <title>Effective JavaScript: Frogger</title>
+         <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="main">
+            <h1>FROGGER</h1>
+
+            <div id="players">
+                <p>Choose your player:<br>
+                <span class="player"><a href="#" onclick="choosePlayer(1)"><img src="images/char-boy-thumb.png" alt="Boy character picture"></a></span>
+                <span class="player"><a href="#" onclick="choosePlayer(2)"><img src="images/char-cat-girl-thumb.png" alt="Cat girl character picture"></a></span>
+                <span class="player"><a href="#" onclick="choosePlayer(3)"><img src="images/char-horn-girl-thumb.png" alt="Horn girl character picture"></a></span>
+                <span class="player"><a href="#" onclick="choosePlayer(4)"><img src="images/char-pink-girl-thumb.png" alt="Pink girl character picture"></a></span>
+                <span class="player"><a href="#" onclick="choosePlayer(5)"><img src="images/char-princess-girl-thumb.png" alt="Princess character picture"></a></span>
+                </p>
+            </div>
+
+            <div id="gameControl">
+                <input id="startBtn" type="button" value="Start Over" onclick="restart()">
+                <span id= "gameOver"></span>
+            </div>
+            
+            <div id="scoreAndLifes">
+                <span id="score">Score: 0</span><br>
+                <span id="lifes">Lifes left: 10</span>
+            </div>
+
+            <div id="musicAndSounds">
+                <audio id="music" src="sounds/BassLoop.wav" autoplay loop>Your browser does not support the <code>audio</code> element.</audio>
+                <audio id = "end" src="sounds/end.wav"></audio>
+                <audio id = "colSound" src="sounds/laser.wav"></audio>
+                <audio id = "tada" src="sounds/tada.wav"></audio>
+                <audio id = "hit" src="sounds/hit.wav"></audio>
+                <input id = "musicBtn" type="button" value="Turn music off" onclick="mute()">
+            </div>
+
+        </div>
+        <script src="js/resources.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/engine.js"></script>
+    </body>
 </html>

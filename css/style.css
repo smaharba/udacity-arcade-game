@@ -1,3 +1,39 @@
 body {
     text-align: center;
+    background-color: yellowgreen;
+}
+
+#main {
+	background-color: yellowgreen;
+	}
+
+#gameControl {
+	display: inline-block;
+}
+
+#gameOver {
+	font-size: 80px;
+	position: fixed;
+	left: 260px;
+	top: 450px;
+}
+
+#scoreAndLifes {
+	display: inline-block;
+	font-size: 30px;
+}
+
+#musicAndSounds {
+	display: inline-block;
+}
+
+img {
+}
+
+input {
+	margin: 20px;
+}
+
+.player a:hover img {
+	background-color:rgba(0, 0, 0, 0.3);
 }
